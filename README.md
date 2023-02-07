@@ -2,7 +2,7 @@
 
 This is my attempt at some python web scraping. I will scrape the data from the Codeforces website and this can be accessed by making an API call to a REST endpoint I created using flask.
 
-> The motive of this project is to aid a CP specific editor. I've been making some prototypes of it using PyQt6 on the ```orange/editor``` branch. Take a look at that if it interests you.
+> The motive of this project is to aid a CP specific editor. I've been making some prototypes of it using PyQt6 on the [```orange/editor```](https://github.com/Abhijna-Raghavendra/CodeforcesAPI/tree/orange/editor) branch. Take a look at that if it interests you.
 
 ### Setup
 
