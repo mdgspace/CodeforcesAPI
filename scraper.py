@@ -17,8 +17,8 @@ def scrape(q):
         "input_file": soup.find('div', class_ = "input-file").text.replace('input',''),
         "output_file": soup.find('div', class_ = "output-file").text.replace('output',''),
         "content": content,
-        "input_specs": soup.find('div', class_ = "input-specification").text.replace('Input',''),
+        "input_specs": soup.find('div', class_ = "input-specification").text.replace('Input','').replace("$$$","$$"),
         "output_specs": soup.find('div', class_ = "output-specification").text.replace('Output','').replace("$$$","$$"),
-        "sample_tests": soup.find('div', class_ = "sample-tests").text.replace('Examples', '').replace('Example','').replace("$$$","$$"),
+        "sample_tests": soup.find('div', class_ = "sample-tests").text.replace('Examples', '').replace('Example',''),
     }
     return data
