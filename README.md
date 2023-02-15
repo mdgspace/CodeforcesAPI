@@ -18,9 +18,9 @@ This is my attempt at some python web scraping. I will scrape the data from the 
   ```
   ```sh
     # In Windows cmd
-    venv\Scripts\activate.bat
+    virtenv\Scripts\activate.bat
     # In Windows PowerShell
-    venv\Scripts\Activate.ps1
+    virtenv\Scripts\Activate.ps1
     # In Linux or MacOS
     source virtenv/Scripts/activate
   ``` 
