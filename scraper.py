@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import json
 
 def scrape(q):
     web_page = requests.get('https://codeforces.com/problemset/problem/'+q.split('-')[0]+'/'+q.split('-')[1]).text.encode("utf-8")
@@ -19,6 +18,7 @@ def scrape(q):
         "content": content,
         "input_specs": soup.find('div', class_ = "input-specification").text.replace('Input','').replace("$$$","$$"),
         "output_specs": soup.find('div', class_ = "output-specification").text.replace('Output','').replace("$$$","$$"),
-        "sample_tests": soup.find('div', class_ = "sample-tests").text.replace('Examples', '').replace('Example',''),
+        "sample_input": soup.find('div', class_ = "sample-tests").text.replace('Examples', '').replace('Example','').split('Output\n')[0].replace('Input\n',''),
+        "sample_output": soup.find('div', class_ = "sample-tests").text.replace('Examples', '').replace('Example','').split('Output\n')[1],
     }
     return data
